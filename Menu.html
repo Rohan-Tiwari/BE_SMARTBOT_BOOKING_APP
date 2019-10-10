@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+        <script src="MenuOperation.js"></script>
+    <meta charset="utf-8">
+    <title>Menu Card</title>
+  </head>
+  <body>
+    <h1>Menu</h1>
+    <div class="Starters">
+      <table id="Non Veg Starters">
+        <tr>
+          <th>Starters(Non Veg)</th>
+        </tr>
+        <tr>
+          <td>Item</td>
+          <td>Price(rupees)</td>
+          <td>Add</td>
+        </tr>
+        <tr>
+          <td>Tandoori Chicken</td>
+          <td>200(full)</td>
+          <td><input type="checkbox" name="" value=""></td>
+        </tr>
+        <tr>
+          <td> Chicken Tikka</td>
+          <td>120(6 peices)</td>
+          <td><input type="checkbox" name="" value=""></td>
+        </tr>
+        <tr>
+          <td>Chicken Kebab</td>
+          <td>150(9 peices)</td>
+          <td><input type="checkbox" name="" value=""></td>
+        </tr>
+      </table>
+      <br>
+
+        <table id="Veg Starters">
+          <tr>
+            <th>Starters(Veg)</th>
+          </tr>
+          <tr>
+            <td>Item</td>
+            <td>Price(rupees)</td>
+            <td>Add</td>
+          </tr>
+          <tr>
+            <td>Tandoori Paneer</td>
+            <td>200(full)</td>
+            <td><input type="checkbox" name="" value=""></td>
+          </tr>
+          <tr>
+            <td> Paneer Tikka</td>
+            <td>120(6 peices)</td>
+            <td><input type="checkbox" name="" value=""></td>
+          </tr>
+          <tr>
+            <td>Veg Special Sizzler</td>
+            <td>250(1 peice)</td>
+            <td><input type="checkbox" name="" value=""></td>
+          </tr>
+        </table>
+    </div>
+    <a href="D:\CRUDjavaScript\BE_SMARTBOT_BOOKING_APP\ViewOrdered.html" onclick="GetAddedItem()">Ordered Item</a>
+    <input type="button" value="click" onclick="GetAddedItem()" src="ViewOrdered.html"/>
+    <br>
+
+    <table id="OrderViewTable">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>quantity</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+
+
+  </body>
+</html>
