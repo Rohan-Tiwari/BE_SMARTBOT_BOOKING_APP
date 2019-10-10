@@ -45,10 +45,6 @@ function GetAddedItem()
     {
       alert("no food item added");
     }
-    else {
-      //alert("hi");
-      DisplayAddedItems();
-    }
 }
 
 function AddToOrder(foodItem, price)
@@ -63,12 +59,12 @@ function AddToOrder(foodItem, price)
   cell3 =newRow.insertCell(2);
   cell3.innerHTML= '1';
   cell4 =newRow.insertCell(3);
-  cell4.innerHTML= '<input type="button" value="add" onclick="AddQuantity(this)"></input>';
+  cell4.innerHTML= '<input type="button" value="add" onclick="AddQuantity(this)"></input> <input type="button" value="remove" onclick="RemoveQuantity(this)"></input> ';
   cell5= newRow.insertCell(4);
-  cell5.innerHTML=`<a onclick="onDelete(this)">Delete</a>` //<a onclick="onEdit(this)">Edit </a>
+  cell5.innerHTML=`<a onclick="onDelete_Item(this)">Delete</a>` //<a onclick="onEdit(this)">Edit </a>
 }
 
-function onDelete(td)
+function onDelete_Item(td)
 {
   alert("in delete");
   selectedRow= td.parentElement.parentElement;
@@ -78,13 +74,18 @@ function onDelete(td)
 function AddQuantity(td)
 {
   selectedRow= td.parentElement.parentElement;
-  selectedRow.cells[2].innerHTML= selectedRow.item(2) +1;
-  alert(selectedRow);
+  selectedRow.cells.item(2).innerHTML= parseInt(selectedRow.cells.item(2).innerHTML) +1; //selectedRow.cells.item(2) +1;
+  //alert(selectedRow);
 }
 
-function DisplayAddedItems()
+
+function RemoveQuantity(td)
 {
-  var x= document.getElementById("Non Veg Starters").rows[4].cells.length;
-  //alert(x);
-  //alert(document.getElementById("Non Veg Starters").rows[3].cells.item(1).innerHTML);
+  selectedRow= td.parentElement.parentElement;
+  selectedRow.cells.item(2).innerHTML= parseInt(selectedRow.cells.item(2).innerHTML) -1; //selectedRow.cells.item(2) +1;
+  if(parseInt(selectedRow.cells.item(2).innerHTML) <= 0)
+  {
+    selectedRow.cells.item(2).innerHTML='0';
+  }
+  //alert(selectedRow);
 }
